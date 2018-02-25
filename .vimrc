@@ -26,7 +26,7 @@ Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 " git integration
 Plugin 'tpope/vim-fugitive'
-" linting
+" syntax highlighting
 Plugin 'pangloss/vim-javascript'
 " jsx highlighting for working with React
 Plugin 'mxw/vim-jsx'
@@ -50,17 +50,6 @@ Plugin 'raimondi/delimitmate'
 Plugin 'shougo/neocomplete.vim'
 " linting
 Plugin 'w0rp/ale'
-" javascript syntax highlighting
-" Plugin 'vim-syntastic/syntastic'
-" config options for syntax checking with syntastic
-" set statusline+=%#warningmsg#
-" set statusline+=%{SyntasticStatuslineFlag()}
-" set statusline+=%*
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-" let g:syntastic_check_on_open = 1
-" let g:syntastic_check_on_wq = 0
-" let g:syntastic_javascript_checkers = ['eslint']
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
