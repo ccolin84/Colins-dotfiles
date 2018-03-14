@@ -9,6 +9,8 @@ set smarttab
 set number
 " highlight the 80th column
 set colorcolumn=80
+" prevent syntax highlighting from turning off in tmux
+set background=dark
 
 set nocompatible              " be iMproved, required
 filetype off                  " required
