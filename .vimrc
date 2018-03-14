@@ -50,6 +50,8 @@ Plugin 'raimondi/delimitmate'
 Plugin 'shougo/neocomplete.vim'
 " linting
 Plugin 'w0rp/ale'
+" fuzzy file
+Plugin 'ctrlpvim/ctrlp.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
