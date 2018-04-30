@@ -1,4 +1,5 @@
 colorscheme default
+syntax on
 " show existing tab with 4 spaces width
 set tabstop=4
 " when indenting with '>', use 4 spaces width
@@ -115,6 +116,6 @@ endfor
 " ## end of OPAM user-setup addition for vim / base ## keep this line
 " ## added by OPAM user-setup for vim / ocp-indent ## 6661ba45820f6637a5f52739a27bb0dc ## you can edit, but keep this line
 if count(s:opam_available_tools,"ocp-indent") == 0
-  source "/Users/colincrawford/.opam/4.06.1/share/vim/syntax/ocp-indent.vim"
+  source '/Users/colincrawford/.opam/4.06.1/share/vim/syntax/ocp-indent.vim'
 endif
 " ## end of OPAM user-setup addition for vim / ocp-indent ## keep this line
