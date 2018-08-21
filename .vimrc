@@ -9,6 +9,8 @@ set expandtab": "^0.2.0",
 set smarttab
 " turn on line numbers
 set number
+" turn on relative line numbers
+set relativenumber
 " highlight the 80th column
 set colorcolumn=80
 " prevent syntax highlighting from turning off in tmux
