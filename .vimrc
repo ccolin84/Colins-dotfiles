@@ -5,6 +5,8 @@ set tabstop=4
 " when indenting with '>', use 4 spaces width
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
+set backspace=2 " make backspace work like most other programs
+
 set expandtab": "^0.2.0",
 set smarttab
 " turn on line numbers
@@ -37,6 +39,8 @@ Plugin 'pangloss/vim-javascript'
 " jsx highlighting for working with React
 Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
+" for typescript support
+Plugin 'leafgarland/typescript-vim'
 " status bar at the bottom of the screen
 Plugin 'bling/vim-airline'
 " move around the screen more easily
@@ -56,8 +60,17 @@ Plugin 'raimondi/delimitmate'
 Plugin 'shougo/neocomplete.vim'
 " linting
 Plugin 'w0rp/ale'
-let g:ale_fixers = {}
-let g:ale_fixers['javascript'] = ['prettier']
+
+let g:ale_linters = {                                                           
+\   'javascript': ['eslint'],                                                   
+\   'typescript': ['tslint']                                                    
+\}                                                                              
+let g:ale_fixers = {                                                            
+\   'javascript': ['prettier', 'eslint'],                                       
+\   'typescript': ['prettier', 'tslint']                                        
+\}            
+
+" Set this variable to 1 to fix files when you save them.                       
 let g:ale_fix_on_save = 1
 " fuzzy file
 Plugin 'ctrlpvim/ctrlp.vim'
