@@ -6,7 +6,8 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set backspace=2 " make backspace work like most other programs
-
+" highlight search results
+set hlsearch
 set expandtab": "^0.2.0",
 set smarttab
 " turn on line numbers
