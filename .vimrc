@@ -48,6 +48,8 @@ Plugin 'bling/vim-airline'
 Plugin 'easymotion/vim-easymotion'
 " easy line comment/uncomment
 Plugin 'tomtom/tcomment_vim'
+" surround to wrap and remove " ' } ) ...
+Plugin 'tpope/vim-surround'
 " show git indicators on the right side of the screen
 Plugin 'airblade/vim-gitgutter'
 " makes levels of indentation visible
