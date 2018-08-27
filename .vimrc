@@ -30,6 +30,8 @@ call vundle#begin()
 
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
+" better searching
+Plugin 'haya14busa/incsearch.vim'
 " file explorer
 Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
