@@ -43,8 +43,6 @@ map *  <Plug>(incsearch-nohl-*)
 map #  <Plug>(incsearch-nohl-#)
 map g* <Plug>(incsearch-nohl-g*)
 map g# <Plug>(incsearch-nohl-g#)
-" surround blocks more easily
-Plugin 'tpope/vim-surround'
 " file explorer
 Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
