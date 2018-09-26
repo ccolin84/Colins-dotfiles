@@ -50,6 +50,8 @@ map <C-n> :NERDTreeToggle<CR>
 Plugin 'tpope/vim-fugitive'
 " syntax highlighting
 Plugin 'pangloss/vim-javascript'
+" use the gruvbox color scheme
+Plugin 'morhetz/gruvbox'
 " jsx highlighting for working with React
 Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
@@ -104,6 +106,10 @@ let g:ctrlp_custom_ignore = {
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
+
+" set the color scheme to gruvbox
+colorscheme gruvbox
+
 filetype plugin indent on    " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
