@@ -81,6 +81,32 @@ Plugin 'shougo/neocomplete.vim'
 " linting
 Plugin 'w0rp/ale'
 
+" plugin for elixir
+Plugin 'elixir-lang/vim-elixir'
+
+" plugin for golang
+Plugin 'fatih/vim-go'
+
+" rails helper plugins
+Plugin 'christoomey/vim-run-interactive'
+Plugin 'janko-m/vim-test'
+Plugin 'pbrisbin/vim-mkdir'
+Plugin 'slim-template/vim-slim'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-eunuch'
+Plugin 'tpope/vim-projectionist'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-rhubarb'
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'vim-scripts/tComment'
+
+" enable matchit (better '%' key mapping)
+runtime macros/matchit.vim
+
+
 let g:ale_linters = {                                                           
 \   'javascript': ['eslint'],                                                   
 \   'typescript': ['tslint'],
