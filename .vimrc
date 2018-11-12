@@ -48,8 +48,10 @@ Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
 " git integration
 Plugin 'tpope/vim-fugitive'
-" syntax highlighting
+" syntax highlighting for js
 Plugin 'pangloss/vim-javascript'
+" syntax highlighting for reasonml
+Plugin 'reasonml-editor/vim-reason-plus'
 " use the gruvbox color scheme
 Plugin 'morhetz/gruvbox'
 " jsx highlighting for working with React
@@ -81,9 +83,11 @@ Plugin 'w0rp/ale'
 
 let g:ale_linters = {                                                           
 \   'javascript': ['eslint'],                                                   
-\   'typescript': ['tslint']                                                    
+\   'typescript': ['tslint'],
+\   'python': ['pylint']
 \}                                                                              
 let g:ale_fixers = {                                                            
+\   'python': ['autopep8'],
 \   'javascript': ['prettier', 'eslint'],                                       
 \   'typescript': ['prettier', 'tslint']                                        
 \}            
@@ -156,6 +160,6 @@ endfor
 " ## end of OPAM user-setup addition for vim / base ## keep this line
 " ## added by OPAM user-setup for vim / ocp-indent ## 6661ba45820f6637a5f52739a27bb0dc ## you can edit, but keep this line
 if count(s:opam_available_tools,"ocp-indent") == 0
-  source '/Users/colincrawford/.opam/4.06.1/share/vim/syntax/ocp-indent.vim'
+  source '/Users/colincrawford/.opam/4.07.0/share/vim/syntax/ocp-indent.vim'
 endif
 " ## end of OPAM user-setup addition for vim / ocp-indent ## keep this line
