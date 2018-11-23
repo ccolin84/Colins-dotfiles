@@ -114,8 +114,9 @@ let g:ale_linters = {
 \}                                                                              
 let g:ale_fixers = {                                                            
 \   'python': ['autopep8'],
-\   'javascript': ['prettier', 'eslint'],                                       
-\   'typescript': ['prettier', 'tslint']                                        
+\   'javascript': ['prettier', 'eslint'],
+\   'typescript': ['prettier', 'tslint'],
+\   'ruby': ['rubocop']
 \}            
 
 " Set this variable to 1 to fix files when you save them.                       
