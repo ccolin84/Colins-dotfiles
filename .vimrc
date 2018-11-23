@@ -106,10 +106,13 @@ Plugin 'vim-scripts/tComment'
 " enable matchit (better '%' key mapping)
 runtime macros/matchit.vim
 
+" change indentation for js and ts
+autocmd FileType javascript setlocal shiftwidth=2 tabstop=2
+autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
 
 let g:ale_linters = {                                                           
 \   'javascript': ['eslint'],                                                   
-\   'typescript': ['tslint'],
+\   'typescript': ['tslint', 'tsserver'],
 \   'python': ['pylint']
 \}                                                                              
 let g:ale_fixers = {                                                            
