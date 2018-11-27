@@ -113,7 +113,8 @@ autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
 let g:ale_linters = {                                                           
 \   'javascript': ['eslint'],                                                   
 \   'typescript': ['tslint', 'tsserver'],
-\   'python': ['pylint']
+\   'python': ['pylint'],
+\   'html': ['tidy']
 \}                                                                              
 let g:ale_fixers = {                                                            
 \   'python': ['autopep8'],
