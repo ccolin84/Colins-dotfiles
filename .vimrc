@@ -1,3 +1,7 @@
+" disable scroll when in insert mode
+inoremap <ScrollWheelUp> <Nop>
+inoremap <ScrollWheelDown> <Nop>
+
 colorscheme default
 syntax on
 " show existing tab with 4 spaces width
