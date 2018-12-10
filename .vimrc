@@ -84,6 +84,8 @@ Plugin 'raimondi/delimitmate'
 Plugin 'shougo/neocomplete.vim'
 " linting
 Plugin 'w0rp/ale'
+" graphql syntax highlighting
+Plugin 'jparise/vim-graphql'
 
 " plugin for elixir
 Plugin 'elixir-lang/vim-elixir'
