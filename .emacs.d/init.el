@@ -1,8 +1,3 @@
-;; Cider
-;; Paredit
-;; Company
-;; Magit
-
 (require 'ido)
 (ido-mode t)
 
@@ -20,6 +15,7 @@
                       paredit
                       magit
                       company
+                      scala-mode
                       flycheck))
 
 (dolist (p my-packages)
