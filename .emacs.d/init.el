@@ -51,7 +51,7 @@
   (unless (package-installed-p p)
     (package-install p)))
 
-(load (expand-file-name "~/.roswell/lisp/quicklisp/slime-helper.el"))
+(load (expand-file-name "~/.roswell/helper.el"))
 ; (load (expand-file-name "~/quicklisp/slime-helper.el"))
 
 (setf slime-lisp-implementations
