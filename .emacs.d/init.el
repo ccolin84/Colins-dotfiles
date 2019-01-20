@@ -57,7 +57,6 @@
   (exec-path-from-shell-initialize))
 
 (load (expand-file-name "~/.roswell/lisp/quicklisp/slime-helper.el"))
-; (load (expand-file-name "~/quicklisp/slime-helper.el"))
 
 (setf slime-lisp-implementations
        `((sbcl ("ros" "-Q" "-l" "~/.sbclrc" "-L" "sbcl" "run"))
