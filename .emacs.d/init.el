@@ -15,7 +15,7 @@
  '(display-line-numbers (quote visual))
  '(package-selected-packages
    (quote
-    (elixir-mode scala-mode flycheck cider company magit paredit clojure-mode projectile better-defaults))))
+    (exec-path-from-shell elixir-mode scala-mode flycheck cider company magit paredit clojure-mode projectile better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -37,6 +37,7 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
 (defvar my-packages '(better-defaults
+		      exec-path-from-shell
                       projectile
                       clojure-mode
                       cider
@@ -47,9 +48,13 @@
 		      elixir-mode
                       flycheck))
 
+
 (dolist (p my-packages)
   (unless (package-installed-p p)
     (package-install p)))
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
 
 (load (expand-file-name "~/.roswell/lisp/quicklisp/slime-helper.el"))
 ; (load (expand-file-name "~/quicklisp/slime-helper.el"))
