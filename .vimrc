@@ -123,7 +123,7 @@ let g:ale_linters = {
 \   'html': ['tidy']
 \}                                                                              
 let g:ale_fixers = {                                                            
-\   'python': ['autopep8'],
+\   'python': ['black'],
 \   'javascript': ['prettier', 'eslint'],
 \   'typescript': ['prettier', 'tslint'],
 \   'ruby': ['rubocop'],
