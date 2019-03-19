@@ -45,7 +45,8 @@
                       magit
                       company
                       scala-mode
-		      elixir-mode
+                      elixir-mode
+                      format-all
                       flycheck))
 
 
