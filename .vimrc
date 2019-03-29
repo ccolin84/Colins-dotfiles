@@ -142,7 +142,8 @@ let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
 \   'typescript': ['prettier', 'tslint'],
 \   'ruby': ['rubocop'],
-\   'html': ['prettier']
+\   'html': ['prettier'],
+\   'ocaml': ['ocamlformat'],
 \}            
 
 " Set this variable to 1 to fix files when you save them.                       
