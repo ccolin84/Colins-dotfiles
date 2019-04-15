@@ -15,7 +15,7 @@
  '(display-line-numbers (quote visual))
  '(package-selected-packages
    (quote
-    (exec-path-from-shell elixir-mode scala-mode flycheck cider company magit paredit clojure-mode projectile better-defaults))))
+    (format-all exec-path-from-shell elixir-mode scala-mode flycheck cider company magit paredit clojure-mode projectile better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
