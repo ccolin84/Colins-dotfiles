@@ -2,6 +2,13 @@
 inoremap <ScrollWheelUp> <Nop>
 inoremap <ScrollWheelDown> <Nop>
 
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
 colorscheme default
 syntax on
 " show existing tab with 4 spaces width
