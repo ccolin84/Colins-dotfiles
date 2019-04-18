@@ -86,5 +86,12 @@
 ;; Finally we tell lisp-mode to run our function on startup
 (add-hook 'lisp-mode-hook 'lisp-hook-fn)
 
-;; (load (expand-file-name "~/.roswell/helper.el"))
-;; (setq inferior-lisp-program "ros -Q run")
+(setq cider-cljs-lein-repl
+	"(do (require 'figwheel-sidecar.repl-api)
+         (figwheel-sidecar.repl-api/start-figwheel!)
+         (figwheel-sidecar.repl-api/cljs-repl))")
+
+(global-company-mode)
+
+(when (fboundp 'windmove-default-keybindings)
+  (windmove-default-keybindings))
