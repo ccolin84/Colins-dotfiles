@@ -108,6 +108,7 @@ Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-rhubarb'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/tComment'
+Plugin 'christoomey/vim-tmux-navigator'
 
 "--------------------------------------
 Plugin 'zah/nim.vim'
