@@ -86,6 +86,10 @@
 ;; Finally we tell lisp-mode to run our function on startup
 (add-hook 'lisp-mode-hook 'lisp-hook-fn)
 
+;; add paredit mode to cljc init
+(add-hook 'clojure-mode-hook 'paredit-mode)
+(add-hook 'clojurescript-mode-hook 'paredit-mode)
+
 (setq cider-cljs-lein-repl
 	"(do (require 'figwheel-sidecar.repl-api)
          (figwheel-sidecar.repl-api/start-figwheel!)
