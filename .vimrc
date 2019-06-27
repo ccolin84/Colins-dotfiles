@@ -143,7 +143,7 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],                                                   
 \   'typescript': ['tslint', 'tsserver'],
 \   'python': ['pylint', 'mypy'],
-\   'html': ['tidy']
+\   'html': ['prettier']
 \}                                                                              
 let g:ale_fixers = {                                                            
 \   'python': ['black'],
