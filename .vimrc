@@ -116,7 +116,6 @@ Plugin 'tpope/vim-rhubarb'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/tComment'
 Plugin 'christoomey/vim-tmux-navigator'
-Plugin 'styled-components/vim-styled-components'
 
 "--------------------------------------
 Plugin 'zah/nim.vim'
