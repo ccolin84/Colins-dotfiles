@@ -26,6 +26,34 @@
  ;; If there is more than one, they won't work right.
  )
 
+(require 'package)
+(add-to-list 'package-archives
+             '("melpa" . "http://melpa.org/packages/") t)
+(package-initialize)
+
+(defvar my-packages '(better-defaults
+                      exec-path-from-shell
+                      projectile
+                      clojure-mode
+                      cider
+                      paredit
+                      magit
+                      company
+                      scala-mode
+                      elixir-mode
+                      dockerfile-mode
+                      docker-compose-mode
+                      format-all
+                      flycheck))
+
+
+(dolist (p my-packages)
+  (unless (package-installed-p p)
+    (package-install p)))
+
+(when (memq window-system '(mac ns x))
+  (exec-path-from-shell-initialize))
+
 ;; ## added by OPAM user-setup for emacs / base ## 56ab50dc8996d2bb95e7856a6eddb17b ## you can edit, but keep this line
 (require 'opam-user-setup "~/.emacs.d/opam-user-setup.el")
 ;; ## end of OPAM user-setup addition for emacs / base ## keep this line
@@ -38,33 +66,7 @@
 (require 'ido)
 (ido-mode t)
 
-(require 'package)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/") t)
-(package-initialize)
-
 (add-hook 'after-init-hook #'global-flycheck-mode)
-
-(defvar my-packages '(better-defaults
-		      exec-path-from-shell
-                      projectile
-                      clojure-mode
-                      cider
-                      paredit
-                      magit
-                      company
-                      scala-mode
-                      elixir-mode
-                      format-all
-                      flycheck))
-
-
-(dolist (p my-packages)
-  (unless (package-installed-p p)
-    (package-install p)))
-
-(when (memq window-system '(mac ns x))
-  (exec-path-from-shell-initialize))
 
 (load (expand-file-name "~/.roswell/helper.el"))
 
