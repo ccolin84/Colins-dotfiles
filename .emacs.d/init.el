@@ -7,6 +7,9 @@
 ;; don't save the ~ backup files
 (setq make-backup-files nil)
 
+;; turn on line numbers on the sidebar
+(global-linum-mode t)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -18,7 +21,7 @@
  '(display-line-numbers (quote visual))
  '(package-selected-packages
    (quote
-    (format-all exec-path-from-shell elixir-mode scala-mode flycheck cider company magit paredit clojure-mode projectile better-defaults))))
+    (tide typescript-mode format-all exec-path-from-shell elixir-mode scala-mode flycheck cider company magit paredit clojure-mode projectile better-defaults))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -43,6 +46,8 @@
                       elixir-mode
                       dockerfile-mode
                       docker-compose-mode
+                      typescript-mode
+                      tide
                       format-all
                       flycheck))
 
@@ -68,6 +73,41 @@
 
 (add-hook 'after-init-hook #'global-flycheck-mode)
 
+;; -----------------------------------------
+;; SET UP TYPESCRIPT
+;; -----------------------------------------
+(defun setup-tide-mode ()
+  (interactive)
+  (tide-setup)
+  (flycheck-mode +1)
+  (setq flycheck-check-syntax-automatically '(save mode-enabled))
+  (eldoc-mode +1)
+  (tide-hl-identifier-mode +1)
+  ;; company is an optional dependency. You have to
+  ;; install it separately via package-install
+  ;; `M-x package-install [ret] company`
+  (company-mode +1))
+
+;; set the typescript indent level to 2
+(setq-default typescript-indent-level 2)
+
+;; aligns annotation to the right hand side
+(setq company-tooltip-align-annotations t)
+
+(setq tide-format-options
+    '(:baseIndentSize 0
+      :tabSize 2
+      :indentSize 2))
+
+;; formats the buffer before saving
+(add-hook 'before-save-hook 'tide-format-before-save)
+
+(add-hook 'typescript-mode-hook #'setup-tide-mode)
+;; -----------------------------------------
+
+;; -----------------------------------------
+;; SET UP COMMON LISP WITH Roswell
+;; -----------------------------------------
 (load (expand-file-name "~/.roswell/helper.el"))
 
 (setf slime-lisp-implementations
@@ -91,6 +131,7 @@
 
 ;; Finally we tell lisp-mode to run our function on startup
 (add-hook 'lisp-mode-hook 'lisp-hook-fn)
+;; -----------------------------------------
 
 ;; add paredit mode to cljc init
 (add-hook 'clojure-mode-hook 'paredit-mode)
