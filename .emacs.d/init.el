@@ -7,6 +7,9 @@
 ;; don't save the ~ backup files
 (setq make-backup-files nil)
 
+;; highlight matching parens
+(show-paren-mode 1)
+
 ;; turn on line numbers on the sidebar
 (global-linum-mode t)
 
