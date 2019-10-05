@@ -116,6 +116,13 @@ Plugin 'tpope/vim-rhubarb'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/tComment'
 Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'thoughtbot/vim-rspec'
+
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 "--------------------------------------
 Plugin 'zah/nim.vim'
@@ -143,15 +150,16 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],                                                   
 \   'typescript': ['tslint', 'tsserver'],
 \   'python': ['pylint', 'mypy'],
-\   'html': ['prettier']
+\   'html': ['prettier'],
+\   'ruby': ['standardrb']
 \}                                                                              
 let g:ale_fixers = {                                                            
 \   'python': ['black'],
 \   'javascript': ['prettier', 'eslint'],
 \   'typescript': ['prettier', 'tslint'],
-\   'ruby': ['rubocop'],
+\   'ruby': ['standardrb'],
 \   'html': ['prettier'],
-\   'ocaml': ['ocamlformat'],
+\   'ocaml': ['ocamlformat']
 \}            
 
 " Set this variable to 1 to fix files when you save them.                       
