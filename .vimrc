@@ -74,8 +74,6 @@ Plugin 'leafgarland/typescript-vim'
 Plugin 'bling/vim-airline'
 " move around the screen more easily
 Plugin 'easymotion/vim-easymotion'
-" easy line comment/uncomment
-Plugin 'tomtom/tcomment_vim'
 " surround to wrap and remove " ' } ) ...
 Plugin 'tpope/vim-surround'
 " show git indicators on the right side of the screen
@@ -112,12 +110,13 @@ Plugin 'tpope/vim-projectionist'
 Plugin 'tpope/vim-rails'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-rhubarb'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/tComment'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'thoughtbot/vim-rspec'
+Bundle 'jgdavey/tslime.vim'
 
+let g:rspec_command = 'call Send_to_Tmux("rspec {spec}\n")'
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
