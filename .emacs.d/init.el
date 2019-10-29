@@ -41,6 +41,7 @@
                       cider
                       paredit
                       magit
+		      org
                       company
                       scala-mode
                       elixir-mode
