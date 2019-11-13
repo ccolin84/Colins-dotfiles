@@ -10,9 +10,6 @@
 ;; highlight matching parens
 (show-paren-mode 1)
 
-;; turn on line numbers on the sidebar
-(global-linum-mode t)
-
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -44,6 +41,7 @@
                       cider
                       paredit
                       magit
+		      org
                       company
                       scala-mode
                       elixir-mode

@@ -1,4 +1,12 @@
-USER_DIR="/Users/$USER"
+#!/bin/bash
+
+UNAME="$(uname)"
+case "${UNAME}" in
+    Linux*)     USER_DIR="/home/$USER";;
+    Darwin*)    USER_DIR="/Users/$USER";;
+    *)          echo "Unknown Machine Type"; exit 1;;
+esac
+
 WORKING_DIR=$(pwd)
 
 # each file to symlink with the path of where to symlink it
