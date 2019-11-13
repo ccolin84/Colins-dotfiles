@@ -137,6 +137,7 @@
 ;; -----------------------------------------
 
 ;; add paredit mode to cljc init
+(add-hook 'lisp-mode 'paredit-mode)
 (add-hook 'clojure-mode-hook 'paredit-mode)
 (add-hook 'clojurescript-mode-hook 'paredit-mode)
 
