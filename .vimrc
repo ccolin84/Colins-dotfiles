@@ -86,7 +86,7 @@ let g:indent_guides_enable_on_vim_startup = 1
 " close () {} [] automatically
 Plugin 'raimondi/delimitmate'
 " autocomplete
-Plugin 'shougo/neocomplete.vim'
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
 " linting
 Plugin 'w0rp/ale'
 " graphql syntax highlighting
