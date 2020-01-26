@@ -57,6 +57,9 @@ map g# <Plug>(incsearch-nohl-g#)
 " file explorer
 Plugin 'scrooloose/nerdtree'
 map <C-n> :NERDTreeToggle<CR>
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'ryanoasis/vim-devicons'
+Plugin 'tiagofumo/vim-nerdtree-syntax-highlight'
 " git integration
 Plugin 'tpope/vim-fugitive'
 " syntax highlighting for js
