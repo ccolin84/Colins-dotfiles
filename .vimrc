@@ -73,6 +73,8 @@ Plugin 'mxw/vim-jsx'
 let g:jsx_ext_required = 0
 " for typescript support
 Plugin 'leafgarland/typescript-vim'
+" tsx highlighting
+Plugin 'peitalin/vim-jsx-typescript'
 " status bar at the bottom of the screen
 Plugin 'bling/vim-airline'
 " move around the screen more easily
