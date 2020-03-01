@@ -152,7 +152,7 @@ autocmd FileType typescript setlocal shiftwidth=2 tabstop=2
 
 let g:ale_linters = {                                                           
 \   'javascript': ['eslint'],                                                   
-\   'typescript': ['tslint', 'tsserver'],
+\   'typescript': ['eslint', 'tsserver'],
 \   'python': ['pylint', 'mypy'],
 \   'html': ['prettier'],
 \   'ruby': ['standardrb']
